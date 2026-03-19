@@ -39,7 +39,7 @@ nav {
 position: fixed; top: 0; left: 0; right: 0; z-index: 200;
 display: flex; align-items: center; justify-content: space-between;
 padding: 16px 48px;
-background: rgba(247,245,240,0.92); backdrop-filter: blur(14px);
+background: rgba(255,255,255,0.95); backdrop-filter: blur(14px);
 border-bottom: 1px solid var(–border);
 }
 .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
@@ -47,7 +47,7 @@ border-bottom: 1px solid var(–border);
 width: 32px; height: 32px; border-radius: 9px; background: var(–ink);
 display: flex; align-items: center; justify-content: center;
 }
-.logo-icon svg { color: #F7F5F0; }
+.logo-icon svg { color: #ffffff; }
 .logo-text { font-family: ‘Fraunces’, serif; font-size: 18px; font-weight: 700; color: var(–ink); letter-spacing: -0.03em; }
 .nav-links { display: flex; align-items: center; gap: 28px; }
 .nav-links a { font-size: 13px; font-weight: 500; color: var(–ink2); text-decoration: none; transition: color .15s; }
@@ -62,7 +62,7 @@ display: flex; align-items: center; justify-content: center;
 /* Mobile menu drawer */
 .mobile-menu {
 display: none; position: fixed; top: 65px; left: 0; right: 0; z-index: 199;
-background: rgba(247,245,240,0.98); backdrop-filter: blur(14px);
+background: rgba(255,255,255,0.98); backdrop-filter: blur(14px);
 border-bottom: 1px solid var(–border);
 padding: 16px 24px 28px; flex-direction: column;
 }
@@ -464,74 +464,59 @@ font-size: 11px; font-weight: 800; color: #000; margin-left: -8px; flex-shrink: 
 
 /* ─── BEFORE VS AFTER ─── */
 .bva-outer {
-background: var(–ink); padding: 90px 24px; overflow: hidden;
+background: #F3F4F6; padding: 90px 24px; overflow: hidden;
+border-top: 1px solid var(–border); border-bottom: 1px solid var(–border);
 }
 .bva-inner { max-width: 1160px; margin: 0 auto; }
 .bva-outer .section-label { color: var(–amber); }
-.bva-outer .section-title { color: var(–bg); margin-bottom: 10px; }
-.bva-outer .section-sub { color: rgba(255,255,255,0.72); margin-bottom: 56px; }
-
-.bva-tabs {
-display: flex; gap: 0; margin-bottom: 36px;
-background: rgba(255,255,255,0.05); border-radius: 12px;
-padding: 4px; width: fit-content;
-}
-.bva-tab {
-padding: 9px 24px; border-radius: 9px; border: none; cursor: pointer;
-font-family: ‘DM Sans’, sans-serif; font-size: 13px; font-weight: 700;
-transition: all .2s; letter-spacing: 0.01em;
-}
-.bva-tab.before { background: transparent; color: rgba(247,245,240,0.4); }
-.bva-tab.before.active { background: #C0392B; color: #fff; }
-.bva-tab.after  { background: transparent; color: rgba(247,245,240,0.4); }
-.bva-tab.after.active  { background: var(–green); color: #fff; }
+.bva-outer .section-title { color: var(–ink); margin-bottom: 10px; }
+.bva-outer .section-sub { color: var(–ink3); margin-bottom: 56px; }
 
 .bva-grid {
 display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start;
 }
 .bva-col {
 border-radius: 20px; overflow: hidden;
-border: 1px solid rgba(255,255,255,0.08);
+border: 1px solid rgba(0,0,0,0.10);
+box-shadow: 0 4px 20px rgba(0,0,0,0.07);
 }
 .bva-col-header {
 display: flex; align-items: center; gap: 10px;
-padding: 16px 22px; border-bottom: 1px solid rgba(255,255,255,0.08);
+padding: 16px 22px; border-bottom: 1px solid rgba(0,0,0,0.08);
 }
 .bva-col-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
 .bva-col-title { font-size: 13px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; font-family: ‘JetBrains Mono’, monospace; }
-.bva-col-sub { font-size: 11px; margin-left: auto; font-weight: 500; }
+.bva-col-sub { font-size: 11px; margin-left: auto; font-weight: 600; }
 
-/* Before col */
-.bva-before { background: rgba(192,57,43,0.08); }
-.bva-before .bva-col-header { background: rgba(192,57,43,0.15); }
-.bva-before .bva-col-title { color: #E8735A; }
-.bva-before .bva-col-dot { background: #C0392B; }
-.bva-before .bva-col-sub { color: rgba(232,115,90,0.6); }
+/* Before col — light red */
+.bva-before { background: #FFF5F5; }
+.bva-before .bva-col-header { background: #FFE4E1; }
+.bva-before .bva-col-title { color: #B91C1C; }
+.bva-before .bva-col-dot { background: #EF4444; }
+.bva-before .bva-col-sub { color: #DC2626; }
 
-/* After col */
-.bva-after { background: rgba(26,122,74,0.08); }
-.bva-after .bva-col-header { background: rgba(26,122,74,0.15); }
-.bva-after .bva-col-title { color: #2ECC71; }
-.bva-after .bva-col-dot { background: var(–green); }
-.bva-after .bva-col-sub { color: rgba(46,204,113,0.6); }
+/* After col — light green */
+.bva-after { background: #F0FDF4; }
+.bva-after .bva-col-header { background: #DCFCE7; }
+.bva-after .bva-col-title { color: #166534; }
+.bva-after .bva-col-dot { background: #22C55E; }
+.bva-after .bva-col-sub { color: #16A34A; }
 
 /* Scenario rows */
 .bva-scenario {
-padding: 20px 22px; border-bottom: 1px solid rgba(255,255,255,0.06);
+padding: 20px 22px; border-bottom: 1px solid rgba(0,0,0,0.06);
 }
 .bva-scenario:last-child { border-bottom: none; }
 .bva-scenario-label {
 font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
 margin-bottom: 10px; font-family: ‘JetBrains Mono’, monospace;
 }
-.bva-before .bva-scenario-label { color: rgba(232,115,90,0.6); }
-.bva-after  .bva-scenario-label { color: rgba(46,204,113,0.6); }
+.bva-before .bva-scenario-label { color: #B91C1C; }
+.bva-after  .bva-scenario-label { color: #166534; }
 
-/* Chat-style message bubbles */
+/* Chat-style message bubbles — DARK text for light backgrounds */
 .bva-bubbles { display: flex; flex-direction: column; gap: 8px; }
-.bubble {
-display: flex; align-items: flex-start; gap: 8px;
-}
+.bubble { display: flex; align-items: flex-start; gap: 8px; }
 .bubble.you { flex-direction: row-reverse; }
 .bubble-avatar {
 width: 26px; height: 26px; border-radius: 50%; flex-shrink: 0;
@@ -540,45 +525,41 @@ font-size: 10px; font-weight: 800;
 }
 .bubble-text {
 max-width: 78%; padding: 9px 13px; border-radius: 12px;
-font-size: 12px; line-height: 1.55;
+font-size: 12px; line-height: 1.55; font-weight: 500;
 }
-.bubble.you  .bubble-text { background: rgba(255,255,255,0.10); color: rgba(247,245,240,0.85); border-bottom-right-radius: 4px; }
-.bubble.them .bubble-text { background: rgba(255,255,255,0.05); color: rgba(247,245,240,0.55); border-bottom-left-radius: 4px; }
-.bubble-time { font-size: 10px; color: rgba(247,245,240,0.25); margin-top: 4px; text-align: right; }
+.bva-before .bubble.you  .bubble-text { background: #FEE2E2; color: #1F1F1F; border: 1px solid #FECACA; border-bottom-right-radius: 4px; }
+.bva-before .bubble.them .bubble-text { background: #fff; color: #374151; border: 1px solid #E5E7EB; border-bottom-left-radius: 4px; }
+.bva-after  .bubble.you  .bubble-text { background: #BBF7D0; color: #1F1F1F; border: 1px solid #86EFAC; border-bottom-right-radius: 4px; }
+.bva-after  .bubble.them .bubble-text { background: #fff; color: #374151; border: 1px solid #E5E7EB; border-bottom-left-radius: 4px; }
+.bubble-time { font-size: 10px; color: #9CA3AF; margin-top: 4px; text-align: right; }
 
 /* Status rows */
 .bva-status-row {
 display: flex; align-items: center; gap: 10px; padding: 8px 0;
-border-bottom: 1px solid rgba(255,255,255,0.04);
-font-size: 12px;
+border-bottom: 1px solid rgba(0,0,0,0.05); font-size: 12px;
 }
 .bva-status-row:last-child { border-bottom: none; }
 .bva-status-icon { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 13px; flex-shrink: 0; }
 .bva-status-body { flex: 1; }
-.bva-status-name { font-size: 12px; font-weight: 600; color: rgba(247,245,240,0.85); margin-bottom: 1px; }
-.bva-status-detail { font-size: 11px; color: rgba(247,245,240,0.35); }
+.bva-status-name { font-size: 12px; font-weight: 600; color: #111827; margin-bottom: 1px; }
+.bva-status-detail { font-size: 11px; color: #6B7280; }
 .bva-status-badge { font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 5px; white-space: nowrap; }
 
-/* Arrow divider */
-.bva-arrow {
-display: flex; align-items: center; justify-content: center;
-position: relative;
-}
-.bva-arrow-circle {
-width: 44px; height: 44px; border-radius: 50%;
-background: var(–amber); display: flex; align-items: center; justify-content: center;
-font-size: 20px; font-weight: 800; color: #000; flex-shrink: 0;
-box-shadow: 0 0 0 6px rgba(200,134,26,0.15);
-z-index: 2; position: relative;
-}
+/* BVA inline text overrides — dark readable text */
+.bva-before .bva-scenario > div:not(.bva-bubbles) p,
+.bva-before .bva-scenario > div > div { color: #374151 !important; }
+.bva-after  .bva-scenario > div:not(.bva-bubbles) p,
+.bva-after  .bva-scenario > div > div { color: #374151 !important; }
+
+/* Spreadsheet mock inside BVA */
+.bva-sheet-header { background: #FECACA !important; color: #B91C1C !important; }
+.bva-dashboard-header { background: #BBF7D0 !important; color: #166534 !important; }
 
 @media (max-width: 768px) {
 .bva-outer { padding: 60px 20px; }
 .bva-grid { grid-template-columns: 1fr; gap: 16px; }
 .bva-outer .section-sub { margin-bottom: 36px; }
 .bva-col-sub { display: none; }
-.bva-tabs { width: 100%; }
-.bva-tab { flex: 1; text-align: center; padding: 9px 12px; }
 }
 
 /* ════════════════════════════════════════
@@ -1085,16 +1066,15 @@ transition: opacity .15s;
     <p class="section-sub">Two scenarios. Two outcomes. The only difference is whether you have FollowUp running.</p>
 
 ```
-<!-- ── SCENARIO 1: Cold Lead ── -->
-<div style="margin-bottom: 48px;">
+<!-- ── SCENARIO 1 ── -->
+<div style="margin-bottom:48px">
   <div style="display:flex;align-items:center;gap:12px;margin-bottom:22px">
-    <div style="width:32px;height:32px;border-radius:9px;background:rgba(200,134,26,0.2);display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0">❄️</div>
+    <div style="width:32px;height:32px;border-radius:9px;background:#FEF3C7;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0">❄️</div>
     <div>
-      <div style="font-size:16px;font-weight:800;color:var(--bg);font-family:'Fraunces',serif;letter-spacing:-0.02em">Scenario 1 — Lead goes quiet after first contact</div>
-      <div style="font-size:12px;color:rgba(247,245,240,0.4);margin-top:2px">A warm lead stops responding. What happens next?</div>
+      <div style="font-size:16px;font-weight:800;color:var(--ink);font-family:'Fraunces',serif;letter-spacing:-0.02em">Scenario 1 — Lead goes quiet after first contact</div>
+      <div style="font-size:12px;color:var(--ink3);margin-top:2px">A warm lead stops responding. What happens next?</div>
     </div>
   </div>
-
   <div class="bva-grid reveal">
     <!-- BEFORE -->
     <div class="bva-col bva-before">
@@ -1107,7 +1087,7 @@ transition: opacity .15s;
         <div class="bva-scenario-label">Day 1 — You send the first message</div>
         <div class="bva-bubbles">
           <div class="bubble you">
-            <div class="bubble-avatar" style="background:rgba(200,134,26,0.3);color:var(--amber)">You</div>
+            <div class="bubble-avatar" style="background:#B91C1C;color:#fff">You</div>
             <div>
               <div class="bubble-text">"Hey Sarah, great chatting earlier! Here's the proposal you asked for 👋"</div>
               <div class="bubble-time">Mon 10:14am · Delivered</div>
@@ -1117,26 +1097,26 @@ transition: opacity .15s;
       </div>
       <div class="bva-scenario">
         <div class="bva-scenario-label">Day 3 — No reply. You get busy.</div>
-        <div style="padding:12px 14px;background:rgba(192,57,43,0.1);border-radius:10px;border:1px solid rgba(192,57,43,0.2)">
-          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+        <div style="padding:12px 14px;background:#FEE2E2;border-radius:10px;border:1px solid #FECACA">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
             <span style="font-size:16px">😰</span>
-            <span style="font-size:12px;font-weight:700;color:rgba(247,245,240,0.7)">You're juggling 6 other clients</span>
+            <span style="font-size:12px;font-weight:700;color:#991B1B">You're juggling 6 other clients</span>
           </div>
-          <div style="font-size:12px;color:rgba(247,245,240,0.4);line-height:1.6">"I'll follow up later this week... actually maybe Monday... I'll add it to my to-do list..."</div>
+          <div style="font-size:12px;color:#6B7280;line-height:1.6">"I'll follow up later this week... actually maybe Monday... I'll add it to my to-do list..."</div>
         </div>
       </div>
       <div class="bva-scenario">
         <div class="bva-scenario-label">Day 9 — You finally remember</div>
         <div class="bva-bubbles">
           <div class="bubble you">
-            <div class="bubble-avatar" style="background:rgba(200,134,26,0.3);color:var(--amber)">You</div>
+            <div class="bubble-avatar" style="background:#B91C1C;color:#fff">You</div>
             <div>
               <div class="bubble-text">"Hey Sarah, just checking if you got my last message?"</div>
               <div class="bubble-time">Wed 3:47pm · Delivered</div>
             </div>
           </div>
           <div class="bubble them">
-            <div class="bubble-avatar" style="background:rgba(255,255,255,0.08);color:rgba(247,245,240,0.4)">S</div>
+            <div class="bubble-avatar" style="background:#E5E7EB;color:#374151">S</div>
             <div>
               <div class="bubble-text">"Oh hey — sorry, we actually went with another vendor last week. They followed up faster."</div>
               <div class="bubble-time">Thu 11:02am</div>
@@ -1144,12 +1124,12 @@ transition: opacity .15s;
           </div>
         </div>
       </div>
-      <div class="bva-scenario" style="background:rgba(192,57,43,0.06)">
+      <div class="bva-scenario" style="background:#FEE2E2">
         <div style="display:flex;align-items:center;gap:10px">
           <span style="font-size:22px">💸</span>
           <div>
-            <div style="font-size:13px;font-weight:700;color:#E8735A">$4,800 deal lost</div>
-            <div style="font-size:11px;color:rgba(247,245,240,0.35);margin-top:2px">Not because your offer was worse. Because you were 9 days too slow.</div>
+            <div style="font-size:13px;font-weight:700;color:#B91C1C">$4,800 deal lost</div>
+            <div style="font-size:11px;color:#6B7280;margin-top:2px">Not because your offer was worse. Because you were 9 days too slow.</div>
           </div>
         </div>
       </div>
@@ -1166,7 +1146,7 @@ transition: opacity .15s;
         <div class="bva-scenario-label">Day 1 — You send the first message</div>
         <div class="bva-bubbles">
           <div class="bubble you">
-            <div class="bubble-avatar" style="background:rgba(46,204,113,0.2);color:#2ECC71">You</div>
+            <div class="bubble-avatar" style="background:#166534;color:#fff">You</div>
             <div>
               <div class="bubble-text">"Hey Sarah, great chatting earlier! Here's the proposal you asked for 👋"</div>
               <div class="bubble-time">Mon 10:14am · Delivered</div>
@@ -1176,26 +1156,26 @@ transition: opacity .15s;
       </div>
       <div class="bva-scenario">
         <div class="bva-scenario-label">Day 3 — FollowUp detects no reply</div>
-        <div style="padding:12px 14px;background:rgba(26,122,74,0.12);border-radius:10px;border:1px solid rgba(46,204,113,0.2)">
-          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+        <div style="padding:12px 14px;background:#DCFCE7;border-radius:10px;border:1px solid #BBF7D0">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
             <span style="font-size:16px">⚡</span>
-            <span style="font-size:12px;font-weight:700;color:rgba(247,245,240,0.7)">Automation fires automatically</span>
+            <span style="font-size:12px;font-weight:700;color:#166534">Automation fires automatically</span>
           </div>
-          <div style="font-size:12px;color:rgba(247,245,240,0.4);line-height:1.6">Rule triggered: "No reply after 3 days → Send SMS follow-up." No action needed from you.</div>
+          <div style="font-size:12px;color:#374151;line-height:1.6">Rule triggered: "No reply after 3 days → Send SMS follow-up." No action needed from you.</div>
         </div>
       </div>
       <div class="bva-scenario">
         <div class="bva-scenario-label">Day 3 — Auto SMS sent while you sleep</div>
         <div class="bva-bubbles">
           <div class="bubble you">
-            <div class="bubble-avatar" style="background:rgba(46,204,113,0.2);color:#2ECC71">⚡</div>
+            <div class="bubble-avatar" style="background:#166534;color:#fff">⚡</div>
             <div>
               <div class="bubble-text">"Hey Sarah, just checking in — have you had a chance to look at the proposal? Happy to jump on a quick call if helpful 🙌"</div>
               <div class="bubble-time">Thu 10:00am · Auto-sent</div>
             </div>
           </div>
           <div class="bubble them">
-            <div class="bubble-avatar" style="background:rgba(46,204,113,0.15);color:#2ECC71">S</div>
+            <div class="bubble-avatar" style="background:#E5E7EB;color:#374151">S</div>
             <div>
               <div class="bubble-text">"Yes! Sorry for the delay — can we chat tomorrow at 2pm?"</div>
               <div class="bubble-time">Thu 10:34am</div>
@@ -1203,12 +1183,12 @@ transition: opacity .15s;
           </div>
         </div>
       </div>
-      <div class="bva-scenario" style="background:rgba(26,122,74,0.08)">
+      <div class="bva-scenario" style="background:#DCFCE7">
         <div style="display:flex;align-items:center;gap:10px">
           <span style="font-size:22px">🎉</span>
           <div>
-            <div style="font-size:13px;font-weight:700;color:#2ECC71">$4,800 deal closed</div>
-            <div style="font-size:11px;color:rgba(247,245,240,0.35);margin-top:2px">You were on a client call when it happened. FollowUp handled it.</div>
+            <div style="font-size:13px;font-weight:700;color:#166534">$4,800 deal closed</div>
+            <div style="font-size:11px;color:#6B7280;margin-top:2px">You were on a client call when it happened. FollowUp handled it.</div>
           </div>
         </div>
       </div>
@@ -1216,16 +1196,15 @@ transition: opacity .15s;
   </div>
 </div>
 
-<!-- ── SCENARIO 2: No Time to Track ── -->
+<!-- ── SCENARIO 2 ── -->
 <div>
   <div style="display:flex;align-items:center;gap:12px;margin-bottom:22px">
-    <div style="width:32px;height:32px;border-radius:9px;background:rgba(200,134,26,0.2);display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0">📋</div>
+    <div style="width:32px;height:32px;border-radius:9px;background:#FEF3C7;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0">📋</div>
     <div>
-      <div style="font-size:16px;font-weight:800;color:var(--bg);font-family:'Fraunces',serif;letter-spacing:-0.02em">Scenario 2 — Managing 12 leads at once</div>
-      <div style="font-size:12px;color:rgba(247,245,240,0.4);margin-top:2px">You're busy. Who needs a follow-up today?</div>
+      <div style="font-size:16px;font-weight:800;color:var(--ink);font-family:'Fraunces',serif;letter-spacing:-0.02em">Scenario 2 — Managing 12 leads at once</div>
+      <div style="font-size:12px;color:var(--ink3);margin-top:2px">You're busy. Who needs a follow-up today?</div>
     </div>
   </div>
-
   <div class="bva-grid reveal">
     <!-- BEFORE -->
     <div class="bva-col bva-before">
@@ -1236,28 +1215,28 @@ transition: opacity .15s;
       </div>
       <div class="bva-scenario">
         <div class="bva-scenario-label">Your "system" — a spreadsheet + memory</div>
-        <div style="background:rgba(0,0,0,0.2);border-radius:10px;overflow:hidden;margin-top:4px">
-          <div style="padding:8px 12px;background:rgba(192,57,43,0.15);font-size:10px;color:#E8735A;font-family:'JetBrains Mono',monospace;font-weight:700">leads_v3_FINAL_real.xlsx</div>
+        <div style="background:#fff;border-radius:10px;overflow:hidden;margin-top:4px;border:1px solid #FECACA">
+          <div style="padding:8px 12px;background:#FECACA;font-size:10px;color:#B91C1C;font-family:'JetBrains Mono',monospace;font-weight:700">leads_v3_FINAL_real.xlsx</div>
           <div style="padding:10px 12px;display:flex;flex-direction:column;gap:6px">
             <div class="bva-status-row">
-              <div class="bva-status-icon" style="background:rgba(255,255,255,0.05)">😬</div>
+              <div class="bva-status-icon" style="background:#FEE2E2">😬</div>
               <div class="bva-status-body"><div class="bva-status-name">James Torres</div><div class="bva-status-detail">Last contact: "last week??"</div></div>
-              <span class="bva-status-badge" style="background:rgba(255,255,255,0.06);color:rgba(247,245,240,0.3)">???</span>
+              <span class="bva-status-badge" style="background:#FEE2E2;color:#B91C1C">???</span>
             </div>
             <div class="bva-status-row">
-              <div class="bva-status-icon" style="background:rgba(255,255,255,0.05)">🤷</div>
+              <div class="bva-status-icon" style="background:#FEE2E2">🤷</div>
               <div class="bva-status-body"><div class="bva-status-name">Elena Vasquez</div><div class="bva-status-detail">Waiting on budget approval (I think?)</div></div>
-              <span class="bva-status-badge" style="background:rgba(255,255,255,0.06);color:rgba(247,245,240,0.3)">???</span>
+              <span class="bva-status-badge" style="background:#FEE2E2;color:#B91C1C">???</span>
             </div>
             <div class="bva-status-row">
-              <div class="bva-status-icon" style="background:rgba(255,255,255,0.05)">😰</div>
+              <div class="bva-status-icon" style="background:#FEE2E2">😰</div>
               <div class="bva-status-body"><div class="bva-status-name">Marcus Chen</div><div class="bva-status-detail">Follow up?? Or too pushy??</div></div>
-              <span class="bva-status-badge" style="background:rgba(255,255,255,0.06);color:rgba(247,245,240,0.3)">???</span>
+              <span class="bva-status-badge" style="background:#FEE2E2;color:#B91C1C">???</span>
             </div>
-            <div class="bva-status-row" style="opacity:0.4">
-              <div class="bva-status-icon" style="background:rgba(255,255,255,0.05)">...</div>
+            <div class="bva-status-row" style="opacity:0.5">
+              <div class="bva-status-icon" style="background:#F3F4F6">···</div>
               <div class="bva-status-body"><div class="bva-status-name">9 more rows</div><div class="bva-status-detail">You'll get to them. Eventually.</div></div>
-              <span class="bva-status-badge" style="background:rgba(255,255,255,0.06);color:rgba(247,245,240,0.3)">???</span>
+              <span class="bva-status-badge" style="background:#F3F4F6;color:#9CA3AF">???</span>
             </div>
           </div>
         </div>
@@ -1265,10 +1244,10 @@ transition: opacity .15s;
       <div class="bva-scenario">
         <div class="bva-scenario-label">The reality</div>
         <div style="display:flex;flex-direction:column;gap:8px">
-          <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:rgba(247,245,240,0.5)"><span style="color:#E8735A">✗</span> No idea who to follow up with today</div>
-          <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:rgba(247,245,240,0.5)"><span style="color:#E8735A">✗</span> Some leads wait 2+ weeks with no contact</div>
-          <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:rgba(247,245,240,0.5)"><span style="color:#E8735A">✗</span> You follow up at random, not strategically</div>
-          <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:rgba(247,245,240,0.5)"><span style="color:#E8735A">✗</span> High-value leads get the same attention as cold ones</div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:#374151"><span style="color:#B91C1C;font-weight:700">✗</span> No idea who to follow up with today</div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:#374151"><span style="color:#B91C1C;font-weight:700">✗</span> Some leads wait 2+ weeks with no contact</div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:#374151"><span style="color:#B91C1C;font-weight:700">✗</span> You follow up at random, not strategically</div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:#374151"><span style="color:#B91C1C;font-weight:700">✗</span> High-value leads get the same attention as cold ones</div>
         </div>
       </div>
     </div>
@@ -1282,23 +1261,23 @@ transition: opacity .15s;
       </div>
       <div class="bva-scenario">
         <div class="bva-scenario-label">Your morning dashboard — 8:00am</div>
-        <div style="background:rgba(0,0,0,0.25);border-radius:10px;overflow:hidden;margin-top:4px">
-          <div style="padding:8px 12px;background:rgba(26,122,74,0.2);font-size:10px;color:#2ECC71;font-family:'JetBrains Mono',monospace;font-weight:700">📬 3 leads need attention today</div>
+        <div style="background:#fff;border-radius:10px;overflow:hidden;margin-top:4px;border:1px solid #BBF7D0">
+          <div style="padding:8px 12px;background:#DCFCE7;font-size:10px;color:#166534;font-family:'JetBrains Mono',monospace;font-weight:700">📬 3 leads need attention today</div>
           <div style="padding:10px 12px;display:flex;flex-direction:column;gap:6px">
             <div class="bva-status-row">
-              <div class="bva-status-icon" style="background:rgba(192,57,43,0.2)">❄️</div>
+              <div class="bva-status-icon" style="background:#FEE2E2">❄️</div>
               <div class="bva-status-body"><div class="bva-status-name">Elena Vasquez</div><div class="bva-status-detail">Cold 14 days · $9,600 at risk · SMS revival queued</div></div>
-              <span class="bva-status-badge" style="background:rgba(192,57,43,0.2);color:#E8735A">Urgent</span>
+              <span class="bva-status-badge" style="background:#FEE2E2;color:#B91C1C">Urgent</span>
             </div>
             <div class="bva-status-row">
-              <div class="bva-status-icon" style="background:rgba(200,134,26,0.2)">⚡</div>
+              <div class="bva-status-icon" style="background:#FEF3C7">⚡</div>
               <div class="bva-status-body"><div class="bva-status-name">James Torres</div><div class="bva-status-detail">9 days no reply · Auto follow-up sent today</div></div>
-              <span class="bva-status-badge" style="background:rgba(200,134,26,0.2);color:#C8861A">Sent ✓</span>
+              <span class="bva-status-badge" style="background:#DCFCE7;color:#166534">Sent ✓</span>
             </div>
             <div class="bva-status-row">
-              <div class="bva-status-icon" style="background:rgba(46,204,113,0.15)">🔥</div>
+              <div class="bva-status-icon" style="background:#DCFCE7">🔥</div>
               <div class="bva-status-body"><div class="bva-status-name">Priya Patel</div><div class="bva-status-detail">Score: 92 · Opened email 3× · Call her now</div></div>
-              <span class="bva-status-badge" style="background:rgba(46,204,113,0.15);color:#2ECC71">Hot 🔥</span>
+              <span class="bva-status-badge" style="background:#DCFCE7;color:#166534">Hot 🔥</span>
             </div>
           </div>
         </div>
@@ -1306,10 +1285,10 @@ transition: opacity .15s;
       <div class="bva-scenario">
         <div class="bva-scenario-label">The reality</div>
         <div style="display:flex;flex-direction:column;gap:8px">
-          <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:rgba(247,245,240,0.6)"><span style="color:#2ECC71">✓</span> Know exactly who needs attention, every morning</div>
-          <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:rgba(247,245,240,0.6)"><span style="color:#2ECC71">✓</span> Automations follow up while you focus on real work</div>
-          <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:rgba(247,245,240,0.6)"><span style="color:#2ECC71">✓</span> High-value leads flagged and prioritised automatically</div>
-          <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:rgba(247,245,240,0.6)"><span style="color:#2ECC71">✓</span> Zero leads fall through the cracks — ever</div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:#374151"><span style="color:#166534;font-weight:700">✓</span> Know exactly who needs attention, every morning</div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:#374151"><span style="color:#166534;font-weight:700">✓</span> Automations follow up while you focus on real work</div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:#374151"><span style="color:#166534;font-weight:700">✓</span> High-value leads flagged and prioritised automatically</div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:#374151"><span style="color:#166534;font-weight:700">✓</span> Zero leads fall through the cracks — ever</div>
         </div>
       </div>
     </div>
@@ -1317,12 +1296,10 @@ transition: opacity .15s;
 </div>
 
 <!-- Bottom CTA -->
-<div style="text-align:center;margin-top:52px;padding-top:48px;border-top:1px solid rgba(255,255,255,0.08)">
-  <p style="font-size:18px;font-weight:700;color:var(--bg);font-family:'Fraunces',serif;letter-spacing:-0.02em;margin-bottom:8px">
-    Which side do you want to be on?
-  </p>
-  <p style="font-size:14px;color:rgba(247,245,240,0.45);margin-bottom:28px">Set up takes 2 minutes. The first automation runs itself.</p>
-  <a href="#" class="btn btn-amber" style="padding:13px 32px;font-size:15px">Start free — no card needed →</a>
+<div style="text-align:center;margin-top:52px;padding-top:48px;border-top:1px solid var(--border)">
+  <p style="font-size:18px;font-weight:700;color:var(--ink);font-family:'Fraunces',serif;letter-spacing:-0.02em;margin-bottom:8px">Which side do you want to be on?</p>
+  <p style="font-size:14px;color:var(--ink3);margin-bottom:28px">Set up takes 2 minutes. The first automation runs itself.</p>
+  <a href="#waitlist" class="btn btn-amber" style="padding:13px 32px;font-size:15px">Start free — no card needed →</a>
 </div>
 ```
 
